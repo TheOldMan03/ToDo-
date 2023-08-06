@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import TaskDesc from './components/TaskDesc'
 
 function App() {
   return (
     <div>
-      
+      <TaskDesc/>
     </div>
   );
 }
