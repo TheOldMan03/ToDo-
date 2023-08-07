@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-.button-div{
+.stuff-div{
   max-width: 70%;
   min-height: 75vh;
   background-color: white;
@@ -14,4 +14,14 @@
   border-radius: 40px;
   margin:100px auto;
  
+}
+
+.button-side{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.addbutton{
+  display: flex;
+  justify-content: center;
 }

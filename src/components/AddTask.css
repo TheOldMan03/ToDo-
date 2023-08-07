@@ -1,0 +1,28 @@
+.taskdiv{
+    margin-top:35px;
+    margin-bottom: 15px;
+}
+
+.taskform{
+    display: flex;
+    flex-direction: column;
+}
+
+.tname{
+    margin-bottom: 5px;
+    margin-left:25px;
+}
+
+.t-input{
+    width:50%;
+    height: 50px;
+    margin: 5px 30px;
+}
+
+
+
+.d-input{
+    width:70%;
+    height:70px;
+    margin: 5px 30px;
+}

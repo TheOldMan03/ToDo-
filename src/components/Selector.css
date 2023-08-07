@@ -1,0 +1,9 @@
+.buttonStyle{
+   height:70px;
+   width:250px;
+
+   margin-top:15px;
+   border-radius: 30px;
+
+   background-color: rgb(176, 247, 176);
+}

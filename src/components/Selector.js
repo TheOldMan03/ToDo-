@@ -1,14 +1,11 @@
 //This is to select which part of the To Do "App" you want to select
-
 import React from 'react'
+import './Selector.css'
 
-const Selector = () => {
+const Selector = ({text}) => {
   return (
-    <div>
-      <button>Reminders</button>
-      <button>To Do</button>
-      <button>Shopping</button>
-
+    <div className='Button-Area'>
+      <button className='buttonStyle'>{text}</button>
     {/* I need to use routers and links to route the page without reloading the website */}
     {/* For now I will do it later once the UI is completed */}
 
