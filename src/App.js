@@ -1,10 +1,14 @@
 import './App.css';
-import TaskDesc from './components/TaskDesc'
+import Selector from './components/Selector';
 
 function App() {
   return (
-    <div>
-      <TaskDesc/>
+    <div className='main-div'> {/* this is the main div */}
+
+      <div className='button-div'>
+        
+      </div>
+
     </div>
   );
 }
