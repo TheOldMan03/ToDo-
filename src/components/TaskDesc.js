@@ -1,20 +1,20 @@
 //This is the part where the name of the task and its description will be shown
 import React from 'react'
+import './TaskDesc.css'
 
 function TaskDesc(){
   return (
     // some placeholder text and task will be present in it
-    <li>
-        <div>
-            TaskName:This is a task
-        </div>
+    <div className='big-box'>
+      <div>
+        Task No.
+      </div>
 
-        <div>
-            TaskDescription: This is a task description
-        </div>
+      <div>
+        Task Desc
+      </div>
 
-        <input type="radio" />
-    </li>
+    </div>
   )
 }
 

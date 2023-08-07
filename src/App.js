@@ -1,6 +1,7 @@
 import './App.css';
 import Selector from './components/Selector';
 import AddTask from './components/AddTask';
+import TaskDesc from './components/TaskDesc';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <div className="addbutton">
           <Selector text="Add Button"/>
         </div>
+
+        <TaskDesc/>
     
       </div>
 
