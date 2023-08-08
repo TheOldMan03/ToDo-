@@ -6,11 +6,11 @@ function TaskDesc(){
   return (
     // some placeholder text and task will be present in it
     <div className='big-box'>
-      <div>
+      <div className="task-content">
         Task No.
       </div>
 
-      <div>
+      <div className='desc-content'>
         Task Desc
       </div>
 

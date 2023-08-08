@@ -1,7 +1,33 @@
 .big-box{
     width:90%;
-    height: 75px;
+    height: 105px;
     background-color: lightblue; 
 
     margin: 25px auto;
+    border-radius: 40px;
+}
+
+.task-content{
+   max-width:50%;
+   min-height:30px;
+
+   margin-left:15px;
+   margin-top:10px;
+   margin-bottom: 10px;
+
+   padding-left:25px;
+   padding-top:5px;    
+
+}
+
+.desc-content{
+    max-width:50%;
+    min-height:30px;
+
+    margin-left:15px;
+    margin-top:10px;
+    margin-bottom: 10px;
+
+    padding-left:25px;
+    
 }
