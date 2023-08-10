@@ -19,10 +19,6 @@ function App() {
           <AddTask/>
         </div>
 
-        <div className="addbutton">
-          <Selector text="Add Button"/>
-        </div>
-
         <TaskDesc/>
     
       </div>

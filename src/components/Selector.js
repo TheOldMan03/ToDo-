@@ -2,10 +2,10 @@
 import React from 'react'
 import './Selector.css'
 
-const Selector = ({text}) => {
+const Selector = ({text,click}) => {
   return (
     <div className='Button-Area'>
-      <button className='buttonStyle'>{text}</button>
+      <button className='buttonStyle' onClick={click}>{text}</button>
     {/* I need to use routers and links to route the page without reloading the website */}
     {/* For now I will do it later once the UI is completed */}
 
