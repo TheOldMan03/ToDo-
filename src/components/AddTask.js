@@ -5,8 +5,17 @@ import { taskInfo } from './context/task_info'
 
 
 function AddTask() {
-
   const {task,setTask,desc,setDesc}=useContext(taskInfo)
+
+  function Clicked(task,desc){
+    if(task.trim()==="" || desc.trim()===""){
+      console.log("The given inputs are empty!")
+    }
+
+    else{
+      console.log("The given strings contain some value")
+    }
+  }
 
   return (
     <>
@@ -24,8 +33,8 @@ function AddTask() {
       </form>
     </div>
 
-    <div className="addbutton">
-        <Selector text="Add Button"/>  
+    <div className="addbutton"> 
+      <Selector text="Add" click={()=>Clicked(task,desc)}/>
     </div>
     
     </>

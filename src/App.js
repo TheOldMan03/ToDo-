@@ -14,8 +14,6 @@ function App() {
 
       <div className='stuff-div'>
 
-
-      
         <div className='button-side'>
           <Selector text="Reminders"/>
           <Selector text="To Do"/>
