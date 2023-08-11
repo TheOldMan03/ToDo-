@@ -1,29 +1,19 @@
-import React,{useState,useContext} from 'react'
+import React,{useContext} from 'react'
 import './AddTask.css'
 import Selector from './Selector'
+import { taskInfo } from './context/task_info'
+
 
 function AddTask() {
 
-  const [task,setTask]=useState("")
-  const [desc,setDesc]=useState("")
-
-  function Clicked(task,desc){
-
-    if(task==="" || desc===""){
-      console.log("The one of the inputs are empty must fill it")
-    }
-
-    else{
-      console.log("You have successfully added the inputs")
-    }
-  }
+  const {task,setTask,desc,setDesc}=useContext(taskInfo)
 
   return (
     <>
     <div className='taskdiv'>
       <form className='taskform'>
         <label className='tname'>Task 1</label>
-        <input type="text" placeholder='Enter Task Name' className='t-input' value={task} onChange={(e)=>setTask(e.target.value)} />
+        <input type="text" placeholder='Enter Task Name' className='t-input' value={task} onChange={(e)=>setTask(e.target.value)}/>
       </form>
     </div>
 
@@ -35,7 +25,7 @@ function AddTask() {
     </div>
 
     <div className="addbutton">
-        <Selector text="Add Button" click={()=>Clicked(task,desc)}/>  
+        <Selector text="Add Button"/>  
     </div>
     
     </>

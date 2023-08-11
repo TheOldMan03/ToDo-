@@ -1,5 +1,3 @@
-import { useContext } from "react";
+import React,{createContext} from 'react'
 
-const List={}
-
-export default task_info=useContext(List);
+export const taskInfo=createContext(null)
