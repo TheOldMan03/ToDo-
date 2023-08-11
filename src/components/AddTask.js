@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import './AddTask.css'
 import Selector from './Selector'
 
@@ -8,6 +8,7 @@ function AddTask() {
   const [desc,setDesc]=useState("")
 
   function Clicked(task,desc){
+
     if(task==="" || desc===""){
       console.log("The one of the inputs are empty must fill it")
     }
