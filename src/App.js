@@ -9,6 +9,8 @@ function App() {
   const [task,setTask]=useState("")
   const [desc,setDesc]=useState("")
 
+  const [isTask,setIsTask]=useState(false)
+
   return (
     <div className='main-div'> {/* this is the main div */}
 
@@ -21,12 +23,12 @@ function App() {
         </div>
 
 
-        <taskInfo.Provider value={{task,setTask,desc,setDesc}}>
+        <taskInfo.Provider value={{task,setTask,desc,setDesc,isTask,setIsTask}}>
           <div className="inputfield">
             <AddTask/>
           </div>
 
-          <TaskDesc/>
+         {isTask?<TaskDesc/> : ""}
 
         </taskInfo.Provider>
 

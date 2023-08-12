@@ -8,7 +8,6 @@ function TaskDesc(){
   const {task,desc}=useContext(taskInfo)
 
   return (
-    // some placeholder text and task will be present in it
     <div className='big-box'>
       <div className="task-content">
         {task}

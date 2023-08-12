@@ -4,17 +4,17 @@ import Selector from './Selector'
 import { taskInfo } from './context/task_info'
 
 
-function AddTask() {
-  const {task,setTask,desc,setDesc}=useContext(taskInfo)
+const AddTask=()=> {
+  const {task,setTask,desc,setDesc,setIsTask}=useContext(taskInfo)
 
-  function Clicked(task,desc){
+  const Clicked=()=>{
     if(task.trim()==="" || desc.trim()===""){
-      console.log("The given inputs are empty!")
+      setIsTask(false)
     }
 
     else{
-      console.log("The given strings contain some value")
-    }
+      setIsTask(true)
+    } 
   }
 
   return (
@@ -34,7 +34,7 @@ function AddTask() {
     </div>
 
     <div className="addbutton"> 
-      <Selector text="Add" click={()=>Clicked(task,desc)}/>
+      <Selector text="Add" click={()=>Clicked()}/>
     </div>
     
     </>
