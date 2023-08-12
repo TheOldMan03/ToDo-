@@ -5,15 +5,13 @@ import { taskInfo } from './context/task_info'
 
 
 const AddTask=()=> {
-  const {task,setTask,desc,setDesc,setIsTask,data}=useContext(taskInfo)
+  const {task,setTask,desc,setDesc,data}=useContext(taskInfo)
 
   const Clicked=()=>{
     if(task.trim()==="" || desc.trim()===""){
-      setIsTask(false)
     }
 
     else{
-      setIsTask(true)
       data.push([task,desc])
       //how do I render the component multiple times
       //if i use a normal programming language syntax then I would use a for loop instead of map for 

@@ -9,8 +9,6 @@ function App() {
   const [task,setTask]=useState("")
   const [desc,setDesc]=useState("")
 
-  const [isTask,setIsTask]=useState(false)
-
   const data=[]
 
   
@@ -26,7 +24,7 @@ function App() {
         </div>
 
 
-        <taskInfo.Provider value={{task,setTask,desc,setDesc,isTask,setIsTask,data}}>
+        <taskInfo.Provider value={{task,setTask,desc,setDesc,data}}>
           <div className="inputfield">
             <AddTask/>
           </div>
