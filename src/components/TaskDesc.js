@@ -1,5 +1,6 @@
 //This is the part where the name of the task and its description will be shown
 import React from 'react'
+import './TaskDesc.css'
 
 function TaskDesc({task,desc}){
 

@@ -2,35 +2,42 @@ import './App.css';
 import Selector from './components/Selector';
 import AddTask from './components/AddTask';
 import TaskDesc from './components/TaskDesc';
-import {taskInfo} from './components/context/task_info';
-import {useState} from 'react';
+import { taskInfo } from './components/context/task_info';
+import { useState } from 'react';
 
 function App() {
-  const [task,setTask]=useState("")
-  const [desc,setDesc]=useState("")
+  const [task, setTask] = useState("")
+  const [desc, setDesc] = useState("")
 
-  const data=[]
+  const [isTask,setIsTask]=useState(false)
 
-  
+  const data = [["Task 1","Hello THere"]]
+
+
   return (
     <div className='main-div'> {/* this is the main div */}
 
       <div className='stuff-div'>
 
         <div className='button-side'>
-          <Selector text="Reminders"/>
-          <Selector text="To Do"/>
-          <Selector text="Shopping List"/>
+          <Selector text="Reminders" />
+          <Selector text="To Do" />
+          <Selector text="Shopping List" />
         </div>
 
 
-        <taskInfo.Provider value={{task,setTask,desc,setDesc,data}}>
+        <taskInfo.Provider value={{ task, setTask, desc, setDesc, data,isTask,setIsTask }}>
           <div className="inputfield">
-            <AddTask/>
+            <AddTask />
           </div>
 
-          {data.map(e=><TaskDesc task={e[0]} desc={e[1]}/>)}
+          {
+            isTask && data.map(e => (
+              <TaskDesc key={e[0]} task={e[0]} desc={e[1]} />
+            ))
+          }
 
+         
           {/* I should somehow render TaskDesc over here */}
 
         </taskInfo.Provider>
@@ -41,4 +48,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;
