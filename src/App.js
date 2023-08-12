@@ -11,6 +11,9 @@ function App() {
 
   const [isTask,setIsTask]=useState(false)
 
+  const data=[]
+
+  
   return (
     <div className='main-div'> {/* this is the main div */}
 
@@ -23,12 +26,14 @@ function App() {
         </div>
 
 
-        <taskInfo.Provider value={{task,setTask,desc,setDesc,isTask,setIsTask}}>
+        <taskInfo.Provider value={{task,setTask,desc,setDesc,isTask,setIsTask,data}}>
           <div className="inputfield">
             <AddTask/>
           </div>
 
-         {isTask?<TaskDesc/> : ""}
+          {data.map(e=><TaskDesc task={e[0]} desc={e[1]}/>)}
+
+          {/* I should somehow render TaskDesc over here */}
 
         </taskInfo.Provider>
 

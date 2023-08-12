@@ -1,11 +1,7 @@
 //This is the part where the name of the task and its description will be shown
-import React,{useContext} from 'react'
-import {taskInfo} from './context/task_info'
-import './TaskDesc.css'
+import React from 'react'
 
-function TaskDesc(){
-
-  const {task,desc}=useContext(taskInfo)
+function TaskDesc({task,desc}){
 
   return (
     <div className='big-box'>
