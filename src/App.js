@@ -11,8 +11,7 @@ function App() {
 
   const [isTask,setIsTask]=useState(false)
 
-  const data = [["Task 1","Hello THere"]]
-
+  const data = []
 
   return (
     <div className='main-div'> {/* this is the main div */}
