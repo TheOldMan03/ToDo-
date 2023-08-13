@@ -11,7 +11,7 @@ function App() {
 
   const [isTask,setIsTask]=useState(false)
 
-  const data = []
+  const [data,setData]=useState([]);
 
   return (
     <div className='main-div'> {/* this is the main div */}
@@ -25,7 +25,7 @@ function App() {
         </div>
 
 
-        <taskInfo.Provider value={{ task, setTask, desc, setDesc, data,isTask,setIsTask }}>
+        <taskInfo.Provider value={{ task, setTask, desc, setDesc,isTask,setIsTask,data,setData }}>
           <div className="inputfield">
             <AddTask />
           </div>

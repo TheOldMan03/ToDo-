@@ -1,12 +1,11 @@
 import React,{useContext} from 'react'
 import './AddTask.css'
 import Selector from './Selector'
-import TaskDesc from './TaskDesc'
 import { taskInfo } from './context/task_info'
 
 
 const AddTask=()=> {
-  const {task,setTask,desc,setDesc,setIsTask,data}=useContext(taskInfo)
+  const {task,setTask,desc,setDesc,setIsTask,data,setData}=useContext(taskInfo)
 
   //here data is an array...the console log treats data as an array 
   //but the app function thinks the array is empty
@@ -18,7 +17,7 @@ const AddTask=()=> {
 
     else{
       const arr=[task,desc]
-      data.push(arr)
+      setData([...data,arr])
 
       //if the data is successfully pushed
       //then the input fields should be set to empty strings
