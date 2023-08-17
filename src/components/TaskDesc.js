@@ -10,6 +10,10 @@ function TaskDesc({task,desc}){
         {task}
       </div>
 
+      <div className='buttonbox'>
+        <button className='delete'>X</button>
+      </div>
+
       <div className='desc-content'>
         {desc}
       </div>

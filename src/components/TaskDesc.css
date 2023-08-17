@@ -1,7 +1,8 @@
 .big-box{
     width:90%;
-    height: 105px;
+    height: 200px;
     background-color: lightblue; 
+    border:2px solid maroon;
 
     margin: 25px auto;
     border-radius: 40px;
@@ -30,4 +31,19 @@
 
     padding-left:25px;
     
+}
+
+.buttonbox{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.delete{
+    color: white;
+    background-color: red;
+    height:30px;
+    width:33px;
+
+    margin-right:10px
 }
