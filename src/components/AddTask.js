@@ -16,15 +16,18 @@ const AddTask=()=> {
       const TI={task:task,desc:setDesc,task_status:false}
       data.values.push(TI)
   
-      //does the above line of code change the state?
       setData(data)
       console.log(data)
       
     }
 
     else{
+      
       const TI={task:task,desc:setDesc,task_status:true}
-      setData(data.values=[...TI])
+      data.values.push(TI)
+  
+      setData(data)
+
       console.log(data)
 
       //if the data is successfully pushed
