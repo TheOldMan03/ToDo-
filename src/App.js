@@ -10,7 +10,14 @@ function App() {
 
   const [isTask,setIsTask]=useState(false)
 
-  const [data,setData]=useState([]);
+  const [data,setData]=useState({values:[]});
+
+  
+
+  // [
+  //   {task:"",desc:"",isTask:0},
+  //   {task:"",desc:"",isTask:0}
+  // ]
 
   return (
     <div className='main-div'> {/* this is the main div */}
@@ -22,12 +29,7 @@ function App() {
             <AddTask />
           </div>
 
-          {
-            isTask && data.map(e => (
-              <TaskDesc key={e[0]} task={e[0]} desc={e[1]} />
-            ))
-          }
-
+        
          
           {/* I should somehow render TaskDesc over here */}
 

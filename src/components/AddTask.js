@@ -12,12 +12,20 @@ const AddTask=()=> {
 
   const Clicked=()=>{
     if(task.trim()==="" || desc.trim()===""){
-      setIsTask(false)
+
+      const TI={task:task,desc:setDesc,task_status:false}
+      data.values.push(TI)
+  
+      //does the above line of code change the state?
+      setData(data)
+      console.log(data)
+      
     }
 
     else{
-      const arr=[task,desc]
-      setData([...data,arr])
+      const TI={task:task,desc:setDesc,task_status:true}
+      setData(data.values=[...TI])
+      console.log(data)
 
       //if the data is successfully pushed
       //then the input fields should be set to empty strings
@@ -25,7 +33,6 @@ const AddTask=()=> {
       //next task
 
 
-      setIsTask(true)
       //how do I render the component multiple times
       //if i use a normal programming language syntax then I would use a for loop instead of map for 
       //better control and understandablity
