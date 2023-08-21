@@ -10,9 +10,7 @@ function App() {
 
   const [isTask,setIsTask]=useState(false)
 
-  const [data,setData]=useState({values:[]});
-
-  
+  const [data,setData]=useState([]);
 
   // [
   //   {task:"",desc:"",isTask:0},
@@ -29,7 +27,17 @@ function App() {
             <AddTask />
           </div>
 
-        
+          {
+            data.map((datax)=>{
+
+              if(datax.task_status){
+                return(<TaskDesc key={1000*(Math.random()).toFixed(2)} task={datax.task} desc={datax.desc}/>)
+              }
+
+              else{return}
+
+            })
+          }
          
           {/* I should somehow render TaskDesc over here */}
 

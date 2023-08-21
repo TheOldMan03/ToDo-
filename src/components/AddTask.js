@@ -5,7 +5,7 @@ import { taskInfo } from './context/task_info'
 
 
 const AddTask=()=> {
-  const {task,setTask,desc,setDesc,setIsTask,data,setData}=useContext(taskInfo)
+  const {task,setTask,desc,setDesc,data,setData}=useContext(taskInfo)
 
   //here data is an array...the console log treats data as an array 
   //but the app function thinks the array is empty
@@ -13,22 +13,17 @@ const AddTask=()=> {
   const Clicked=()=>{
     if(task.trim()==="" || desc.trim()===""){
 
-      const TI={task:task,desc:setDesc,task_status:false}
-      data.values.push(TI)
-  
+      const TI={task:task.trim(),desc:desc.trim(),task_status:false}
+      data.push(TI) //this returns the length of the updated array
       setData(data)
-      console.log(data)
-      
+   
     }
-
+    
     else{
       
-      const TI={task:task,desc:setDesc,task_status:true}
-      data.values.push(TI)
-  
+      const TI={task:task,desc:desc,task_status:true}
+      data.push(TI)
       setData(data)
-
-      console.log(data)
 
       //if the data is successfully pushed
       //then the input fields should be set to empty strings
