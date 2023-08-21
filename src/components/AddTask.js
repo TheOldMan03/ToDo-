@@ -23,6 +23,11 @@ const AddTask=()=> {
       setData(data)
       setIsClicked(true)
 
+      setTask("")
+      setDesc("")
+
+      //dont know if this actually removes the value of task and desc
+
     
       //if the data is successfully pushed
       //then the input fields should be set to empty strings

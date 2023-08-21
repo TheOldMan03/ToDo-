@@ -29,7 +29,7 @@ function App() {
           </div>
 
           {
-            isClicked && data.map((datax)=>{
+            data.map((datax)=>{
               <TaskDesc key={1000*(Math.random()).toFixed(2)} task={datax.task} desc={datax.desc}/>
             })
           }
