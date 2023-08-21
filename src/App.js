@@ -8,9 +8,10 @@ function App() {
   const [task, setTask] = useState("")
   const [desc, setDesc] = useState("")
 
-  const [isTask,setIsTask]=useState(false)
+  const [isClicked,setIsClicked]=useState(false)
 
   const [data,setData]=useState([]);
+  
 
   // [
   //   {task:"",desc:"",isTask:0},
@@ -22,13 +23,13 @@ function App() {
 
       <div className='stuff-div'>
 
-        <taskInfo.Provider value={{ task, setTask, desc, setDesc,isTask,setIsTask,data,setData }}>
+        <taskInfo.Provider value={{ task, setTask, desc, setDesc,data,setData,isClicked,setIsClicked}}>
           <div className="inputfield">
             <AddTask />
           </div>
 
           {
-            data.map((datax)=>{
+            isClicked && data.map((datax)=>{
 
               if(datax.task_status){
                 return(<TaskDesc key={1000*(Math.random()).toFixed(2)} task={datax.task} desc={datax.desc}/>)
