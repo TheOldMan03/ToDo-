@@ -31,7 +31,7 @@ function App() {
           {
             data.map((datax)=>{
               return(
-                <TaskDesc key={1000*(Math.random()).toFixed(2)} task={datax.task} desc={datax.desc}/>
+                <TaskDesc key={datax.id} id={datax.id} task={datax.task} desc={datax.desc}/>
               )
               
             })

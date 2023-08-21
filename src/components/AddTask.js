@@ -5,7 +5,7 @@ import { taskInfo } from './context/task_info'
 
 
 const AddTask=()=> {
-  const {task,setTask,desc,setDesc,data,setData,setIsClicked}=useContext(taskInfo)
+  const {task,setTask,desc,setDesc,data,setData}=useContext(taskInfo)
 
   //here data is an array...the console log treats data as an array 
   //but the app function thinks the array is empty
@@ -18,7 +18,7 @@ const AddTask=()=> {
 
     else{
       
-      const TI={task:task,desc:desc}
+      const TI={id:1000*(Math.random()).toFixed(2),task:task,desc:desc}
       data.push(TI)
       setData(data)
       
