@@ -30,13 +30,7 @@ function App() {
 
           {
             isClicked && data.map((datax)=>{
-
-              if(datax.task_status){
-                return(<TaskDesc key={1000*(Math.random()).toFixed(2)} task={datax.task} desc={datax.desc}/>)
-              }
-
-              else{return}
-
+              <TaskDesc key={1000*(Math.random()).toFixed(2)} task={datax.task} desc={datax.desc}/>
             })
           }
          

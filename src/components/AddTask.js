@@ -12,20 +12,18 @@ const AddTask=()=> {
 
   const Clicked=()=>{
     if(task.trim()==="" || desc.trim()===""){
-
-      const TI={task:task.trim(),desc:desc.trim(),task_status:false}
-      data.push(TI) //this returns the length of the updated array
-      setData(data)
-   
+      //if the input fields are actually empty then it should give a warning 
+      //that the input fields are empty
     }
 
     else{
       
-      const TI={task:task,desc:desc,task_status:true}
+      const TI={task:task,desc:desc}
       data.push(TI)
       setData(data)
       setIsClicked(true)
 
+    
       //if the data is successfully pushed
       //then the input fields should be set to empty strings
       //and the value of task and desc should also be set to empty string for the 
