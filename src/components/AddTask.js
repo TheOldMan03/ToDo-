@@ -21,13 +21,11 @@ const AddTask=()=> {
       const TI={task:task,desc:desc}
       data.push(TI)
       setData(data)
-      setIsClicked(true)
-
+      
       setTask("")
       setDesc("")
-
-      //dont know if this actually removes the value of task and desc
-
+      
+      console.log(data)
     
       //if the data is successfully pushed
       //then the input fields should be set to empty strings
